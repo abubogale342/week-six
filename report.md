@@ -168,17 +168,23 @@ For efficient similarity search and storage of vector embeddings, we've chosen F
    - Built with Streamlit for a clean, responsive interface
    - Features a chat-like interface with message history
    - Includes clear visual separation between user queries and system responses
+   - Clean, modern UI with a sidebar for additional information and controls
 
 2. **Core Functionality**
-   - Text input for user questions
+   - Text input for user questions with a clear prompt
    - Submit button to trigger processing
-   - Display area showing conversation history
-   - Source attribution for all generated answers
+   - Display area showing conversation history with proper formatting
+   - Expandable source documents for verification
+   - Clear chat button to reset the conversation
 
 3. **User Experience**
-   - Streaming responses for better interactivity
+   - Clean, intuitive interface with clear visual hierarchy
+   - Responsive design that works well on different screen sizes
    - Clear visual indicators for processing state
-   - Responsive design for different screen sizes
+   - Easy-to-read formatting with proper spacing and typography
+
+![Chat Interface Screenshot](./assets/screenshot-UI.png)
+*Figure 1: Screenshot of the Streamlit chat interface showing a sample interaction*
 
 ## 7. Conclusion
 
