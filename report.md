@@ -134,7 +134,53 @@ For efficient similarity search and storage of vector embeddings, we've chosen F
 - **Total complaints in simulated data**: 9,609,797
 - **Complaints with 0 words (empty/NaN)**: 6,629,041
 
-## 4. Conclusion
+## 5. RAG System Implementation
+
+### System Architecture
+
+1. **Document Retrieval**
+   - Utilizes FAISS for efficient similarity search
+   - Employs `all-MiniLM-L6-v2` for generating dense vector embeddings
+   - Implements chunking strategy with 400-word chunks and 50-word overlap
+
+2. **Query Processing**
+   - Converts user queries into vector embeddings
+   - Retrieves top-k most relevant document chunks
+   - Ranks results by semantic similarity scores
+
+3. **Response Generation**
+   - Implements rule-based fallback when no relevant context is found
+   - Formats responses with confidence scores and source attribution
+   - Includes relevant document chunks for verification
+
+### Key Features
+
+- **Robust Error Handling**: Gracefully handles empty or irrelevant search results
+- **Transparent Sourcing**: Shows source documents and confidence scores
+- **Flexible Configuration**: Easy to adjust retrieval parameters (k, score thresholds)
+- **Efficient Processing**: Optimized for real-time query response
+
+## 6. Interactive Chat Interface
+
+### Implementation Details
+
+1. **Frontend Components**
+   - Built with Streamlit for a clean, responsive interface
+   - Features a chat-like interface with message history
+   - Includes clear visual separation between user queries and system responses
+
+2. **Core Functionality**
+   - Text input for user questions
+   - Submit button to trigger processing
+   - Display area showing conversation history
+   - Source attribution for all generated answers
+
+3. **User Experience**
+   - Streaming responses for better interactivity
+   - Clear visual indicators for processing state
+   - Responsive design for different screen sizes
+
+## 7. Conclusion
 
 Based on our analysis:
 - The selected chunk size of 400 words with 50 words overlap effectively handles the majority of our text data.
